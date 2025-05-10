@@ -10,7 +10,7 @@ import { WelcomeSection } from "./ui/welcome-section";
 
 export const App = () => {
   return (
-    <div className="w-full flex flex-col items-center gap-4 overflow-x-hidden">
+    <div className="w-full flex flex-col items-center gap-4 overflow-x-hidden pb-16">
       <WelcomeSection />
       <CalendarSection />
       <TimerSection />
