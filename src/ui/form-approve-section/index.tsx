@@ -25,8 +25,6 @@ export const FormApproveSection = () => {
     triggerOnce: true,
   });
 
-  console.log(state);
-
   return (
     <div className="max-w-[570px] flex flex-col gap-8 items-center px-4 pt-16 relative">
       <span
