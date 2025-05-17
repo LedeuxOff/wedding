@@ -25,7 +25,7 @@ export const WelcomeSection = () => {
     <div className="max-w-[1100px] flex flex-col items-center relative pt-32 px-16">
       <img
         ref={ref3}
-        src="/public/images/flower-1-image.png"
+        src="/images/flower-1-image.png"
         className={`absolute rotate-[180deg] w-[300px] md:w-[360px] right-[-170px] md:right-[-230px] top-[-240px] md:top-[-240px] transition-all duration-1000 ease-out transform ${
           inView3 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
         }`}
@@ -50,7 +50,7 @@ export const WelcomeSection = () => {
         </div>
         <img
           ref={ref1}
-          src="/public/images/main-image.jpg"
+          src="/images/main-image.jpg"
           alt="main-image"
           className={`w-full max-w-[420px] grayscale rounded-[8px] transition-all duration-1400 ease-out transform ${
             inView1 ? "opacity-100" : "opacity-0"

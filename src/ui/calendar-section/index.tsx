@@ -25,7 +25,7 @@ export const CalendarSection = () => {
             inView1 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
           alt="flower-2-img"
-          src="/public/images/flower-2-image.png"
+          src="/images/flower-2-image.png"
         />
         <img
           ref={ref3}
@@ -33,7 +33,7 @@ export const CalendarSection = () => {
             inView3 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"
           }`}
           alt="heart-img"
-          src="/public/images/heart-line-image.png"
+          src="/images/heart-line-image.png"
         />
         <div
           ref={ref2}

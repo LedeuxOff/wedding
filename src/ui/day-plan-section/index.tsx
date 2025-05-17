@@ -52,7 +52,7 @@ export const DayPlanSection = () => {
           inView2 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
         }`}
         alt="flower-image"
-        src="/public/images/flower-1-image.png"
+        src="/images/flower-1-image.png"
       />
       <div className="flex gap-1 relative mt-[-48px]">
         <div
@@ -87,7 +87,7 @@ export const DayPlanSection = () => {
         <img
           className="msx-h-[904px]"
           alt="day-plan-image"
-          src="/public/images/pulse-image.png"
+          src="/images/pulse-image.png"
         />
         <div
           ref={ref5}

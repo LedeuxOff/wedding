@@ -21,7 +21,7 @@ export const DressCodeSection = () => {
       <img
         ref={ref1}
         alt="flower-image"
-        src="/public/images/flower-1-image.png"
+        src="/images/flower-1-image.png"
         className={`absolute top-[-100px] w-[200px] left-[-90px] sm:w-[400px] sm:left-[-240px] sm:top-[-240px] duration-1000 ease-out transform ${
           inView1 ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
         }`}
@@ -52,27 +52,27 @@ export const DressCodeSection = () => {
         <img
           className="w-[64px] h-[64px] rounded-full"
           alt="black"
-          src="/public/images/dress-code/black.png"
+          src="/images/dress-code/black.png"
         />
         <img
           className="w-[64px] h-[64px] rounded-full"
           alt="black"
-          src="/public/images/dress-code/green.png"
+          src="/images/dress-code/green.png"
         />
         <img
           className="w-[64px] h-[64px] rounded-full"
           alt="black"
-          src="/public/images/dress-code/brown.png"
+          src="/images/dress-code/brown.png"
         />
         <img
           className="w-[64px] h-[64px] rounded-full"
           alt="black"
-          src="/public/images/dress-code/gray.png"
+          src="/images/dress-code/gray.png"
         />
         <img
           className="w-[64px] h-[64px] rounded-full"
           alt="black"
-          src="/public/images/dress-code/red.png"
+          src="/images/dress-code/red.png"
         />
       </div>
     </div>

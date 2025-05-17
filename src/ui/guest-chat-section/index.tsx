@@ -39,7 +39,7 @@ export const GuestChatSection = () => {
       <img
         ref={ref3}
         alt="tg-qr"
-        src="/public/images/telegram-qr.jpg"
+        src="/images/telegram-qr.jpg"
         className={`w-full max-w-[420px] duration-1000 ease-out transform ${
           inView3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
@@ -57,7 +57,7 @@ export const GuestChatSection = () => {
         <span className="great-vibes text-[48px] text-red-800">Ждём Вас!</span>
         <img
           alt="heart-image"
-          src="/public/images/heart-image.png"
+          src="/images/heart-image.png"
           className="w-[100px]"
         />
       </div>
