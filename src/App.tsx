@@ -1,3 +1,4 @@
+import { AuthorSection } from "./ui/author-section";
 import { CalendarSection } from "./ui/calendar-section";
 import { DayPlanSection } from "./ui/day-plan-section";
 import { DetailsSection } from "./ui/details-section";
@@ -20,6 +21,7 @@ export const App = () => {
       <FormApproveSection />
       <DetailsSection />
       <GuestChatSection />
+      <AuthorSection />
     </div>
   );
 };
