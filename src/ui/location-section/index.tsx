@@ -31,7 +31,7 @@ export const LocationSection = () => {
           inView2 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-30"
         }`}
       >
-        <span className="great-vibes text-[48px]">Локация</span>
+        <span className="great-vibes text-[48px] text-red-800">Локация</span>
         <div className="border-b w-full text-center border-gray-300 font-[500] text-[18px]">
           Green House
         </div>
