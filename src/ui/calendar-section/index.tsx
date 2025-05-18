@@ -6,16 +6,6 @@ export const CalendarSection = () => {
     triggerOnce: true,
   });
 
-  const { ref: ref2, inView: inView2 } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  const { ref: ref3, inView: inView3 } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
   return (
     <div className="max-w-[1100px] flex flex-col justify-center pt-16 px-16">
       <div className="flex gap-4 relative">
@@ -28,17 +18,17 @@ export const CalendarSection = () => {
           src="/images/flower-2-image.png"
         />
         <img
-          ref={ref3}
+          ref={ref1}
           className={`absolute w-[96px] right-[12px] top-[16px] sm:right-[28px] sm:top-[32px] transition-all duration-1000 ease-out transform ${
-            inView3 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"
+            inView1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"
           }`}
           alt="heart-img"
           src="/images/heart-line-image.png"
         />
         <div
-          ref={ref2}
+          ref={ref1}
           className={`flex gap-4 relative transition-all duration-1000 ease-out transform ${
-            inView2 ? "opacity-100" : "opacity-0"
+            inView1 ? "opacity-100" : "opacity-0"
           }`}
         >
           <div className="flex flex-col items-center gap-4">
@@ -76,8 +66,9 @@ export const CalendarSection = () => {
         </div>
       </div>
       <span
+        ref={ref1}
         className={`great-vibes text-right text-[48px] text-red-800 mt-12 mr-2 transition-all duration-1000 ease-out transform ${
-          inView3 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"
+          inView1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"
         }`}
       >
         Август
