@@ -20,7 +20,7 @@ export const CalendarSection = () => {
         <img
           ref={ref1}
           className={`absolute w-[96px] right-[12px] top-[16px] sm:right-[28px] sm:top-[32px] transition-all duration-1000 ease-out transform ${
-            inView1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"
+            inView1 ? "opacity-100" : "opacity-0"
           }`}
           alt="heart-img"
           src="/images/heart-line-image.png"
@@ -68,7 +68,7 @@ export const CalendarSection = () => {
       <span
         ref={ref1}
         className={`great-vibes text-right text-[48px] text-red-800 mt-12 mr-2 transition-all duration-1000 ease-out transform ${
-          inView1 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-40"
+          inView1 ? "opacity-100" : "opacity-0"
         }`}
       >
         Август
