@@ -47,8 +47,8 @@ export const DetailsSection = () => {
       >
         <span className="great-vibes text-[48px] text-white">Цветы</span>
         <span className="text-center text-white">
-          После свадьбы мы собираемся в свадебное путешествие, поэтому вместо
-          букета мы были бы рады бутылке вашего любимого напитка.
+          Приятным комплиментом для нас вместо цветов будет бутылочка хорошего
+          вина.
         </span>
       </div>
     </div>

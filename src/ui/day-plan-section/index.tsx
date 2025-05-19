@@ -62,7 +62,7 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            15:30
+            16:00
           </span>
           <span className="font-[500]">ЦЕРЕМОНИЯ</span>
           <span className="leading-5">
@@ -81,7 +81,7 @@ export const DayPlanSection = () => {
           </span>
           <span className="font-[500]">НОЧНОЙ КОСТЁР</span>
           <span className="leading-5">
-            Любовь, тёплый плед и песни под гитару перед настоящим костром
+            Любовь, тёплый плед и песни под гитару перед костром
           </span>
         </div>
         <img
@@ -96,7 +96,7 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            14:00
+            15:30
           </span>
           <span className="font-[500]">ФУРШЕТ</span>
           <span className="leading-5">
@@ -111,9 +111,9 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            16:00
+            17:00
           </span>
-          <span className="font-[500]">СВАДБЕНЫЙ УЖИН</span>
+          <span className="font-[500]">СВАДЕБНЫЙ УЖИН</span>
           <span className="leading-5">
             Вкусная еда и весёлая программа от нашего крутого ведущего
           </span>
