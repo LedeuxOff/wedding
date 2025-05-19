@@ -22,7 +22,7 @@ export const WelcomeSection = () => {
   });
 
   return (
-    <div className="max-w-[1100px] flex flex-col items-center relative pt-32 px-16">
+    <div className="max-w-[1100px] flex flex-col items-center relative pt-16 px-16 gap-16">
       <img
         ref={ref3}
         src="/images/flower-1-image.png"
@@ -31,28 +31,29 @@ export const WelcomeSection = () => {
         }`}
       />
 
-      <div className="max-w-[570px] flex flex-col items-center relative">
-        <div
-          ref={ref2}
-          className={`flex flex-col items-center absolute top-[-48px] z-100 transition-all duration-1000 ease-out transform ${
-            inView2 ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-          }`}
-        >
-          <span className="great-vibes text-[48px] leading-9 text-red-800">
-            Никита
-          </span>
-          <span className="great-vibes text-[36px] leading-9 text-red-800">
-            &
-          </span>
-          <span className="great-vibes text-[48px] leading-9 text-red-800">
-            Анастасия
-          </span>
-        </div>
+      <div
+        ref={ref2}
+        className={`flex flex-col items-center z-100 transition-all duration-1000 ease-out transform ${
+          inView2 ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+        }`}
+      >
+        <span className="great-vibes text-[48px] leading-9 text-red-800">
+          Никита
+        </span>
+        <span className="great-vibes text-[36px] leading-9 text-red-800">
+          &
+        </span>
+        <span className="great-vibes text-[48px] leading-9 text-red-800">
+          Анастасия
+        </span>
+      </div>
+
+      <div className="max-w-[570px] flex flex-col items-center relative rounded-[8px] overflow-hidden">
         <img
           ref={ref1}
           src="/images/main-image.jpg"
           alt="main-image"
-          className={`w-full max-w-[420px] grayscale rounded-[8px] transition-all duration-1400 ease-out transform ${
+          className={`w-full max-w-[420px] scale-130 transition-all duration-1400 ease-out transform ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         />

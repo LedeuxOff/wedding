@@ -20,7 +20,7 @@ export const LocationSection = () => {
       >
         <div className="bg-red-800 rounded-full absolute top-[-32px] sm:top-[-80px] right-[50%] w-[64px] h-[64px] sm:w-[128px] sm:h-[128px] z-10 translate-x-[50%]" />
         <img
-          className="max-w-[520px] w-full rounded-[8px] overflow-hidden grayscale"
+          className="max-w-[520px] w-full rounded-[8px] overflow-hidden"
           alt="location-image"
           src="/images/location-image.webp"
         />
