@@ -1,4 +1,6 @@
+import { guestData } from "../../config/guests-data";
 import { useInView } from "react-intersection-observer";
+import { useSearchParams } from "react-router-dom";
 
 export const WelcomeSection = () => {
   const { ref: ref1, inView: inView1 } = useInView({
@@ -21,6 +23,11 @@ export const WelcomeSection = () => {
     triggerOnce: true,
   });
 
+  const [searchParams] = useSearchParams();
+  const inviteId = searchParams.get("id");
+
+  const guestInviteData = guestData.find((item) => item.id === inviteId);
+
   return (
     <div className="max-w-[1100px] flex flex-col items-center relative pt-16 px-16 gap-16">
       <img
@@ -41,14 +48,14 @@ export const WelcomeSection = () => {
           Никита
         </span>
         <span className="great-vibes text-[36px] leading-9 text-red-800">
-          &
+          и
         </span>
         <span className="great-vibes text-[48px] leading-9 text-red-800">
           Анастасия
         </span>
       </div>
 
-      <div className="max-w-[570px] flex flex-col items-center relative rounded-[8px] overflow-hidden">
+      <div className="max-w-[570px] flex flex-col items-center relative rounded-[8px] overflow-hidden shadow-md">
         <img
           ref={ref1}
           src="/images/main-image.jpg"
@@ -66,7 +73,7 @@ export const WelcomeSection = () => {
         }`}
       >
         <span className="great-vibes text-[48px] text-red-800 text-center">
-          Дорогие гости!
+          {guestInviteData?.title || "Дорогие гости!"}
         </span>
         <span className="text-center text-[18px]">
           Приглашаем Вас разделить с нами радостный день, в который мы станем

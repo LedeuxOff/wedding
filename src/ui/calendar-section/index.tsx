@@ -19,7 +19,7 @@ export const CalendarSection = () => {
         />
         <img
           ref={ref1}
-          className={`absolute w-[96px] right-[16px] top-[16px] sm:right-[28px] sm:top-[32px] transition-all duration-1000 ease-out transform ${
+          className={`absolute w-[96px] right-[16px] top-[16px] sm:right-[36px] sm:top-[32px] transition-all duration-1000 ease-out transform ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
           alt="heart-img"
