@@ -191,4 +191,10 @@ export const guestData = [
     guestName: "Марина",
     count: 1,
   },
+  {
+    id: "33",
+    title: "Дорогой дедушка!", // Семья жениха
+    guestName: "Дедушка Вова",
+    count: 1,
+  },
 ];
