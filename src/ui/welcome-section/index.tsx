@@ -44,26 +44,36 @@ export const WelcomeSection = () => {
           inView2 ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
         }`}
       >
-        <span className="great-vibes text-[48px] leading-9 text-red-800">
+        <span className="great-vibes text-[64px] leading-9 text-red-800">
           Никита
         </span>
-        <span className="great-vibes text-[36px] leading-9 text-red-800">
+        <span className="great-vibes text-[48px] leading-9 text-red-800">
           и
         </span>
-        <span className="great-vibes text-[48px] leading-9 text-red-800">
+        <span className="great-vibes text-[64px] leading-9 text-red-800">
           Анастасия
         </span>
       </div>
 
-      <div className="max-w-[570px] flex flex-col items-center relative rounded-[8px] overflow-hidden shadow-md">
+      <div className="relative mt-8">
         <img
           ref={ref1}
-          src="/images/main-image.jpg"
+          src="/images/img-border.png"
           alt="main-image"
-          className={`w-full max-w-[420px] scale-130 transition-all duration-1400 ease-out transform ${
+          className={`absolute top-[9px] w-full max-w-[420px] scale-139 transition-all duration-1400 ease-out transform ${
             inView1 ? "opacity-100" : "opacity-0"
           }`}
         />
+        <div className="max-w-[570px] flex flex-col items-center relative rounded-[8px] overflow-hidden shadow-md">
+          <img
+            ref={ref1}
+            src="/images/main-image.jpg"
+            alt="main-image"
+            className={`w-full max-w-[280px] scale-130 transition-all duration-1400 ease-out transform ${
+              inView1 ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        </div>
       </div>
 
       <div
@@ -76,8 +86,8 @@ export const WelcomeSection = () => {
           {guestInviteData?.title || "Дорогие гости!"}
         </span>
         <span className="text-center text-[18px]">
-          Приглашаем Вас разделить с нами радостный день, в который мы станем
-          семьёй!
+          Приглашаем {guestInviteData?.count === 1 ? "Тебя" : "Вас"} разделить
+          радостный день, в который мы станем семьёй!
         </span>
       </div>
     </div>

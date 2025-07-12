@@ -62,7 +62,7 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            16:00
+            15:30
           </span>
           <span className="font-[500]">ЦЕРЕМОНИЯ</span>
           <span className="leading-5">
@@ -77,7 +77,7 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            21:30
+            22:00
           </span>
           <span className="font-[500]">НОЧНОЙ КОСТЁР</span>
           <span className="leading-5">
@@ -96,7 +96,7 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            15:30
+            14:30
           </span>
           <span className="font-[500]">ФУРШЕТ</span>
           <span className="leading-5">
@@ -111,7 +111,7 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            17:00
+            16:00
           </span>
           <span className="font-[500]">СВАДЕБНЫЙ УЖИН</span>
           <span className="leading-5">
@@ -126,7 +126,7 @@ export const DayPlanSection = () => {
           }`}
         >
           <span className="great-vibes text-red-800 text-[48px] leading-12">
-            22:30
+            23:00
           </span>
           <span className="font-[500]">ФИНАЛ</span>
           <span className="leading-5">

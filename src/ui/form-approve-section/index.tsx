@@ -2,6 +2,8 @@ import { useInView } from "react-intersection-observer";
 import { ErrorIcon } from "./error-icon";
 import { useFormApproveSectionModel } from "./model";
 import { SuccessIcon } from "./success-icon";
+import { useSearchParams } from "react-router-dom";
+import { guestData } from "../../config/guests-data";
 
 export const FormApproveSection = () => {
   const {
@@ -9,8 +11,7 @@ export const FormApproveSection = () => {
     onSubmit,
     onChangeFormData,
     textAreaHandler,
-    firstNameError,
-    lastNameError,
+    guestNameError,
     textareaRef,
     state,
   } = useFormApproveSectionModel();
@@ -24,6 +25,11 @@ export const FormApproveSection = () => {
     threshold: 0.1,
     triggerOnce: true,
   });
+
+  const [searchParams] = useSearchParams();
+  const inviteId = searchParams.get("id");
+
+  const guestInviteData = guestData.find((item) => item.id === inviteId);
 
   return (
     <div className="max-w-[570px] flex flex-col gap-8 items-center px-4 pt-16 relative">
@@ -41,7 +47,7 @@ export const FormApproveSection = () => {
           inView2 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
         }`}
       >
-        Просим вас подтвердить свое присутствие до 1 июля 2025 года на нашем
+        Просим вас подтвердить свое присутствие до 1 августа 2025 года на нашем
         празднике любым удобным способом или заполните форму ниже:
       </span>
 
@@ -53,40 +59,21 @@ export const FormApproveSection = () => {
         <form onSubmit={onSubmit} className="flex flex-col gap-4 w-full">
           <div className="flex flex-col gap-1">
             <label
-              htmlFor="lastName"
+              htmlFor="guestName"
               className={`text-[14px] font-[500] ${
-                lastNameError && "text-red-700"
+                guestNameError && "text-red-700"
               }`}
             >
-              Фамилия
+              {`${guestInviteData?.count === 1 ? "Имя" : "Имена гостей"}`}
             </label>
             <input
-              id="lastName"
-              name="lastName"
-              value={formData.lastName}
+              id="guestName"
+              name="guestName"
+              value={formData.guestName}
+              disabled
               onChange={onChangeFormData}
               className={`border rounded-[8px] focus:outline-none focus:ring-0 text-[16px] py-2 px-3 ${
-                lastNameError && "border-red-700"
-              }`}
-            />
-          </div>
-
-          <div className="flex flex-col gap-1">
-            <label
-              htmlFor="lastName"
-              className={`text-[14px] font-[500] ${
-                firstNameError && "text-red-700"
-              }`}
-            >
-              Имя
-            </label>
-            <input
-              id="firstName"
-              name="firstName"
-              value={formData.firstName}
-              onChange={onChangeFormData}
-              className={`border rounded-[8px] focus:outline-none focus:ring-0 text-[16px] py-2 px-3 ${
-                firstNameError && "border-red-700"
+                guestNameError && "border-red-700"
               }`}
             />
           </div>
@@ -113,7 +100,7 @@ export const FormApproveSection = () => {
               state.submitting ? "bg-red-900" : "bg-red-800"
             }`}
           >
-            {state.submitting ? "Загрузка..." : "Отправить"}
+            {state.submitting ? "Загрузка..." : "Подтвердить"}
           </button>
         </form>
       )}

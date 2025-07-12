@@ -1,13 +1,18 @@
+import { guestData } from "../../config/guests-data";
 import { useForm } from "@formspree/react";
 import { useRef, useState, type SyntheticEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 
 export const useFormApproveSectionModel = () => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const [firstNameError, setFirstNameError] = useState(false);
-  const [lastNameError, setLastNameError] = useState(false);
+  const [guestNameError, setGuestNameError] = useState(false);
+  const [searchParams] = useSearchParams();
+  const inviteId = searchParams.get("id");
+
+  const guestInviteData = guestData.find((item) => item.id === inviteId);
+
   const [formData, setFormData] = useState({
-    lastName: undefined,
-    firstName: undefined,
+    guestName: guestInviteData?.guestName || "Неопознанный бобер",
     comment: undefined,
   });
 
@@ -21,20 +26,11 @@ export const useFormApproveSectionModel = () => {
 
   const onSubmit = (e: SyntheticEvent) => {
     e.preventDefault();
-    if (!formData.firstName || !formData.lastName) {
-      if (!formData.firstName) {
-        setFirstNameError(true);
-      }
-
-      if (!formData.lastName) {
-        setLastNameError(true);
-      }
-
-      return;
+    if (!formData.guestName) {
+      return setGuestNameError(true);
     }
 
-    setFirstNameError(false);
-    setLastNameError(false);
+    setGuestNameError(false);
     handleSubmit(formData);
   };
 
@@ -51,9 +47,8 @@ export const useFormApproveSectionModel = () => {
     onSubmit,
     onChangeFormData,
     textAreaHandler,
-    firstNameError,
-    lastNameError,
     textareaRef,
+    guestNameError,
     state,
   };
 };
