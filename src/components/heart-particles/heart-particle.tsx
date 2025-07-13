@@ -5,12 +5,19 @@ interface HeartProps {
 }
 
 export const HeartParticle: React.FC<HeartProps> = ({ onRemove }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [style, setStyle] = useState({
     left: Math.random() * window.innerWidth,
     animationDuration: `${3 + Math.random() * 3}s`,
     size: `${10 + Math.random() * 15}px`,
   });
+
+  if (!style) {
+    setStyle({
+      left: Math.random() * window.innerWidth,
+      animationDuration: `${3 + Math.random() * 3}s`,
+      size: `${10 + Math.random() * 15}px`,
+    });
+  }
 
   useEffect(() => {
     const timer = setTimeout(onRemove, 5000); // удаляем через время анимации
