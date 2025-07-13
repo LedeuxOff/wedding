@@ -9,10 +9,12 @@ import { LocationSection } from "../ui/location-section";
 import { TimerSection } from "../ui/timer-section";
 import { WelcomeSection } from "../ui/welcome-section";
 import { HeartParticles } from "../components/heart-particles";
+import { AnimatedDoggie } from "../components/doggie";
 
 export const RootPage = () => {
   return (
     <div className="w-full flex flex-col items-center gap-4 overflow-x-hidden pb-16">
+      <AnimatedDoggie />
       <HeartParticles />
       <WelcomeSection />
       <CalendarSection />
