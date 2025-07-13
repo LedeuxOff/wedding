@@ -13,7 +13,7 @@ export const useFormApproveSectionModel = () => {
 
   const [formData, setFormData] = useState({
     guestName: guestInviteData?.guestName || "Неопознанный бобер",
-    comment: undefined,
+    comment: !guestInviteData ? "Ах ты хитрый бобер..." : undefined,
   });
 
   const [state, handleSubmit] = useForm("xovdrkdj");

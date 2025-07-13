@@ -93,15 +93,17 @@ export const FormApproveSection = () => {
             />
           </div>
 
-          <button
-            type="submit"
-            disabled={state.submitting}
-            className={`text-white py-4 rounded-[8px] cursor-pointer ${
-              state.submitting ? "bg-red-900" : "bg-red-800"
-            }`}
-          >
-            {state.submitting ? "Загрузка..." : "Подтвердить"}
-          </button>
+          {guestInviteData && (
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className={`text-white py-4 rounded-[8px] cursor-pointer ${
+                state.submitting ? "bg-red-900" : "bg-red-800"
+              }`}
+            >
+              {state.submitting ? "Загрузка..." : "Подтвердить"}
+            </button>
+          )}
         </form>
       )}
     </div>
