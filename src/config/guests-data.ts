@@ -133,9 +133,9 @@ export const guestData = [
   },
   {
     id: "23",
-    title: "Дорогие Роман и Марк!", // Семья жениха
-    guestName: "Роман и Марк",
-    count: 2,
+    title: "Дорогой Роман!", // Семья жениха
+    guestName: "Роман",
+    count: 1,
   },
   {
     id: "24",
@@ -195,6 +195,12 @@ export const guestData = [
     id: "33",
     title: "Дорогой дедушка!", // Семья жениха
     guestName: "Дедушка Вова",
+    count: 1,
+  },
+  {
+    id: "34",
+    title: "Дорогой Марк!", // Семья жениха
+    guestName: "Марк",
     count: 1,
   },
 ];
